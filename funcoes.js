@@ -8,7 +8,7 @@ $(document).ready(function(){
             $('#frmSac2 .validar ').each(function(index,el) {
                   var $el = $(el);
                   $el.css("border","1px solid #ccc");
-                  el.css("background-color","white");  
+                  $el.css("background-color","white");  
 
                   if ( $el.val().length === 0) {
 
