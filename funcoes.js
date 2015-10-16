@@ -7,23 +7,23 @@ $(document).ready(function(){
 
             $('#frmSac2 .validar ').each(function(index,el) {
 
-                  $(this).css("border","1px solid #ccc");
-                  $(this).css("background-color","white");  
+                  $(el).css("border","1px solid #ccc");
+                  $(el).css("background-color","white");  
 
-                  if ( $(this).val().length === 0) {
+                  if ( $(el).val().length === 0) {
 
-                            $(this).css("background-color","#f2dede");
-                            $(this).css("border","2px solid red");
+                            $(el).css("background-color","#f2dede");
+                            $(el).css("border","2px solid red");
 
-                            $(this).popover({
+                            $(el).popover({
                                 title: "Atenção!",
                                 content: "Preencha o campo.", 
                                 placement: "bottom" // (top, right, bottom, left)
                             });
 
-                            $(this).popover('show');
+                            $(el).popover('show');
                             setTimeout(function() { $("#"+el.id+"").popover('hide'); }, 2000);  
-                            $(this).focus();
+                            $(el).focus();
                             cont = -1;
 
                             return false;
@@ -33,7 +33,7 @@ $(document).ready(function(){
 
             });
             if(cont == 1)
-               $(this).unbind('submit').submit();  
+               $(el).unbind('submit').submit();  
       });
      
 });
