@@ -12,8 +12,6 @@ $(document).ready(function(){
 
                   if ( $(this).val().length === 0) {
 
-                        if ($("#"+el.id+"").hasClass( "validar" )){
-
                             $(this).css("background-color","#f2dede");
                             $(this).css("border","2px solid red");
 
@@ -29,10 +27,9 @@ $(document).ready(function(){
                             cont = -1;
 
                             return false;
-                        }else{
-                             cont =1;
-                        }
-                  }
+                }else{
+                     cont =1;
+                }
 
             });
             if(cont == 1)
