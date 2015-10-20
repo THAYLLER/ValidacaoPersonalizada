@@ -1,8 +1,7 @@
 $(document).ready(function(){ 
       /*########VALIDAÇÃO PERSONALIZADA########*/
-      var cont = 0;
       $('#frmSac2').submit(function(event){
-
+           var cont = 0;
             event.preventDefault();
 
             $('#frmSac2 .validar ').each(function(index,el) {
@@ -32,8 +31,7 @@ $(document).ready(function(){
                 }
 
             });
-            if(cont == 1)
-               $el.unbind('submit').submit();  
+            if(cont == 1){  $(this).unbind('submit').submit(); this.submit(); }
       });
      
 });
